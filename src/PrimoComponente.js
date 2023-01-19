@@ -5,21 +5,12 @@ const PrimoComponente = (props) => {
   console.log(props);
 
   // destructuring from props
-  const { firstName, lastName, country } = props;
+  const {  } = props;
 
   return (
     <>
-      <h5>
-        {firstName}
-      </h5>
-      <h5>
-        {lastName}
-      </h5>
-      <h5>
-        {country}
-      </h5>
     </>
   )
-}
+};
 
 export default PrimoComponente
