@@ -15,6 +15,10 @@ function App() {
           }
         ];
 
+      case 'remove':
+        console.log(state, action);
+        return state.filter((el, idx) => idx !== action.idx);
+
       default:
         return state;
     }
@@ -37,7 +41,19 @@ function App() {
         <input type="text" ref={inputRef}>
         </input>
       </form>
+
       <br/>
+
+      <ul>
+        {
+          items.map((el, idx) => (
+            <li key={idx}>
+              {el.name}
+              <button onClick={() => dispatch({type: "remove", idx})}>x</button>
+            </li>
+          ))
+        }
+      </ul>
     </>
   );
 };
