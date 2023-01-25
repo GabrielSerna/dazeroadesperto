@@ -3,6 +3,7 @@ import React, { useRef, useReducer } from 'react';
 
 function App() {
 
+  // REDUCER FUNCTION
   const reducer = (state, action) => {
     switch (action.type) {
       case 'add':
@@ -23,9 +24,12 @@ function App() {
         return state;
     }
   };
+
+  // USEREF AND USEREDUCER
   const inputRef = useRef();
   const [ items, dispatch ] = useReducer(reducer, []);
 
+  // EVENT: onSubmit
   const handleOnSubmit = (e) => {
     e.preventDefault();
     dispatch({
@@ -35,6 +39,7 @@ function App() {
     inputRef.current.value = '';
   };
 
+  // RENDER HERE
   return (
     <>
       <form onSubmit={handleOnSubmit}>
