@@ -6,10 +6,15 @@ function App() {
   // REACT STATE
   const [ books, setBooks ] = useState([]);
 
+  // 1 create context
+  const BooksContext = React.createContext();
+
   // RENDER HERE
   return (
     <>
-      <BlooksList/>
+      <BooksContext.Provider value={{books, setBooks}}>
+        <BlooksList />
+      </BooksContext.Provider>
     </>
   );
 };
