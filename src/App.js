@@ -1,20 +1,9 @@
-import React, { useState } from 'react';
-import { BooksContext } from './BookContext';
-import BlooksList from './BlooskList';
+import React from 'react'
 
-function App() {
-
-  // REACT STATE
-  const [ books, setBooks ] = useState(['libro1', 'libro2', 'libro3']);
-
-  // RENDER HERE
+const app = () => {
   return (
-    <>
-      <BooksContext.Provider value={{books, setBooks}}>
-        <BlooksList />
-      </BooksContext.Provider>
-    </>
-  );
-};
+    <div></div>
+  )
+}
 
-export default App;
+export default app
