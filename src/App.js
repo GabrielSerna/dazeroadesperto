@@ -1,6 +1,6 @@
 import React from 'react';
-import Search from './components/search';
-import MovieList from './components/movieList';
+import Search from './components/Search';
+import MovieList from './components/MovieList';
 
 const app = () => {
   return (
