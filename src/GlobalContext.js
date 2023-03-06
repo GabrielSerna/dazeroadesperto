@@ -29,6 +29,7 @@ const GlobalState = ({children}) => {
     loading: false
   };
 
+  // render here
   return (
     // create provider - chiudere all'interno del contesto tutti i componenti che useranno questo context
     <GlobalContext.Provider value={contextValue}>
