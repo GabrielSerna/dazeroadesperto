@@ -3,7 +3,7 @@ import { GlobalContext } from '../GlobalContext';
 
 const Search = () => {
 
-  const { searchParam, handleOnChange } = useContext(GlobalContext);
+  const { searchParam, handleOnChange, handleSubmit } = useContext(GlobalContext);
 
   return (
     <div>
@@ -13,7 +13,7 @@ const Search = () => {
         value = { searchParam }
         onChange = { handleOnChange }
       />
-      <button>Submit search</button>
+      <button onClick={handleSubmit}>Submit search</button>
     </div>
   );
 };
